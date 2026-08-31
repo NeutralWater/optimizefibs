@@ -11,5 +11,6 @@ def fib_v1(loop):
 
     return n1
 
-loop = int(input("what num of fib would you like: "))
-print(fib_v1(loop))
+if __name__ == "__main__":
+    loop = int(input("what num of fib would you like: "))
+    print(fib_v1(loop))

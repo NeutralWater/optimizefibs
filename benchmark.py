@@ -5,14 +5,27 @@ import time
 
 n = int(input("benchmark n: "))
 
-start = time.perf_counter()
-r1 = fib_v1(n)
-print("V1:", time.perf_counter() - start)
+runs = 100
 
-start = time.perf_counter()
-r2 = fib_pair(n)
-print("V2:", time.perf_counter() - start)
+v1_total = 0
+v2_total = 0
+v3_total = 0
 
-start = time.perf_counter()
-r3 = fib_fast(n)
-print("V3:", time.perf_counter() - start)
+for i in range(runs):
+    start = time.perf_counter()
+    fib_v1(n)
+    v1_total += time.perf_counter() - start
+
+for i in range(runs):
+    start = time.perf_counter()
+    fib_pair(n)
+    v2_total += time.perf_counter() - start
+
+for i in range(runs):
+    start = time.perf_counter()
+    fib_fast(n)
+    v3_total += time.perf_counter() - start
+
+print("V1 average:", v1_total / runs)
+print("V2 average:", v2_total / runs)
+print("V3 average:", v3_total / runs)

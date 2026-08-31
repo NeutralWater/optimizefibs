@@ -20,5 +20,6 @@ def fib_fast(n):
             a,b = d, c + d
     return a
 
-n = int(input("what num of fib would you like: "))
-print(fib_fast(n))
+if __name__ == "__main__":
+    n = int(input("what num of fib would you like: "))
+    print(fib_fast(n))
