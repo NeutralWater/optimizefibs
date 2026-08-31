@@ -17,6 +17,7 @@ def fib_pair(n):
         return c,d
     else:
         return d, c + d
+    
 
 n = int(input("what num of fib would you like: "))
 r, nr = fib_pair(n)
