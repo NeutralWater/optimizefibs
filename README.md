@@ -5,6 +5,7 @@ Messing around with different ways to calculate Fibonacci numbers as fast as pos
 - V1 - Basic iterative Fibonacci - O(n)
 - V2 - Recursive fast doubling - O(log n) stages
 - V3 - Iterative fast doubling using binary - O(log n) stages
+- V4 - C++ recursive fast doubling + GMP big intergers O(log n) stages
 
 benchmark.cpp has v1-v3 just rewritten in c++
 
